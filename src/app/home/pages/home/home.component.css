@@ -1,0 +1,29 @@
+.search{
+  border: lawngreen solid;
+  height: fit-content;
+}
+
+.search input[type=text]{
+  padding:10px;
+  border-radius:10px;
+  border:0;
+}
+
+.search .search-button{
+  height: 35px;
+  width: 35px;
+  background-color: lawngreen;
+  border-radius: 50%;
+}
+.search .search-button i {
+  margin-left: 8px;
+  margin-top: 7px;
+}
+
+.search input[type=text]:focus{
+  outline: none !important;
+}
+
+.logo img{
+  height: 50px;
+}

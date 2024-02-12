@@ -1,0 +1,31 @@
+<div class="row ms-0 d-centered">
+  <div class="col-2 logo d-flex align-items-center" >
+    <img src="assets/images/logo.png" alt="">
+    <div class="fs-3 fw-semibold">ENOR</div>
+  </div>
+  <div class="search col-7 px-3 py-1 rounded-5 border-success d-flex justify-content-between ms-0">
+    <input type="text" class="col-10 py-1">
+    <div class="search-button">
+      <i class="fa fa-search fs-5"></i>
+    </div>
+  </div>
+  <div class="col-3 d-flex justify-content-end">
+    <div class="icon-sq icon-sq-3 rounded-2">
+      <i class="bi bi-person opacity-75 fs-3"></i>
+    </div>
+  </div>
+</div>
+<app-slider></app-slider>
+
+<section class="mt-5">
+  <div class="fs-2 fw-semibold mb-2">{{ 'titlePopularSongs' | translate}}</div>
+  <app-simple-song></app-simple-song>
+</section>
+
+<section class="mt-4">
+  <div class="fs-2 fw-semibold mb-2">{{ 'titleNewSongs' | translate}}</div>
+</section>
+
+<section class="mt-4">
+  <div class="fs-2 fw-semibold">{{ 'titleRecomended' | translate}}</div>
+</section>
