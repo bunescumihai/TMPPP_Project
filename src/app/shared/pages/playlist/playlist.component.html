@@ -1,0 +1,64 @@
+<div class="row ms-0 mt-5">
+  <div class="col-9">
+    <div>
+      <div class="playlist-card border border-2 rounded-3 border-green p-2">
+        <div class="d-centered">
+          <img src="assets/images/logo.png" alt="">
+        </div>
+        <div class="border-start border-2 ps-4 d-flex align-items-center">
+            <div>
+              <h2 >Playlist name</h2>
+
+              <div class="fs-6">
+                <a href="/" class="text-black">Linkin Park - Lost</a>,&nbsp;
+                <a href="/" class="text-black">Linkin Park - Lost</a>,&nbsp;
+                <a href="/" class="text-black">Linkin Park - Lost</a>,&nbsp;
+                <span >...</span>
+              </div>
+
+              <div class="opacity-50 fs-6 mt-2">
+                {{ 'numberOfSongs'| translate }}:
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="mt-3">
+        <div class="fs-2 fw-semibold my-3">{{ 'titleSongsFromThePlaylist' | translate}}</div>
+        <div class="p-2 bg-light gx-3">
+          <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
+            <div class="example-box position-relative" *ngFor="let movie of movies" cdkDrag>
+              <div class="example-custom-placeholder" *cdkDragPlaceholder></div>
+              <app-simple-song></app-simple-song>
+              <div class="example-handle position-absolute" style="top: 12px; right: 3px; cursor:move" cdkDragHandle>
+                <i class="bi bi-list fs-5 opacity-50"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-3 position-relative">
+    <div class="position-sticky bg-light p-2 top-0">
+      <section id="my-playlists" class="mb-3 border border-green rounded-2">
+        <div class="bg-green fs-5 p-2 fw-semibold rounded-2">
+          {{ 'userPlaylists'| translate }}
+        </div>
+        <div >
+          <div>
+          </div>
+
+        </div>
+      </section>
+      <section id="history">
+        <div class="bg-green fs-5 p-2  fw-semibold rounded-2">
+          {{ 'userHistory'| translate }}
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+
+

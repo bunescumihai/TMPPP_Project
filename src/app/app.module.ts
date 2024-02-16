@@ -8,6 +8,7 @@ import {FormsModule} from "@angular/forms";
 import {BsDropdownModule} from "ngx-bootstrap/dropdown";
 import {NgxTranslateModule} from "./translate/translate.module";
 import {HomeModule} from "./home/home.module";
+import {UserModule} from "./user/user.module";
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import {HomeModule} from "./home/home.module";
     BsDropdownModule.forRoot(),
     NgxTranslateModule,
     FormsModule,
-    HomeModule
+    HomeModule,
+    UserModule
   ],
   providers: [],
   bootstrap: [AppComponent],

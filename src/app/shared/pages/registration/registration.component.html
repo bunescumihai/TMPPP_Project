@@ -1,0 +1,73 @@
+<div class="w-100" style="margin-top: 150px">
+  <div class="d-centered">
+    <div class="bg-light p-3 border border-2 border-opacity-50 rounded-4 col-7">
+      <div class="d-centered">
+        <img src="assets/images/logo.png" alt="logo" style="height: 75px">
+      </div>
+      <h3 class="text-center">{{'regTitle'|translate}}</h3>
+      <form class="mt-2" [formGroup]="regForm">
+        <div class="row row-cols-2 ms-0 gx-3">
+          <div>
+
+            <label for="email" class="form-label">{{'emailLabel'|translate}}</label>
+            <input formControlName="email" name="email" id="email" type="email" class="form-control" >
+            <label for="username" class="form-label">{{'usernameLabel'|translate}}</label>
+            <input formControlName="username" name="username" id="username" type="text" class="form-control" >
+            <label for="password1"  class="form-label">{{'password1Label'|translate}}</label>
+            <input formControlName="password1" name="password1"  id="password1" type="password" class="form-control">
+            <label for="password2"  class="form-label">{{'password2Label'|translate}}</label>
+            <input formControlName="password2" name="password2"  id="password2" type="password" class="form-control">
+
+          </div>
+          <div>
+            <div>{{'regRoleTitle' | translate}}</div>
+
+            <div class="form-check mt-2">
+              <input class="form-check-input" type="radio" checked name="radio" id="role1" value="1">
+              <label class="form-check-label" for="role1">Role 1</label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radio" id="role2" value="2">
+              <label class="form-check-label" for="role1">Role 2</label>
+            </div>
+
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="radio" id="role3" value="3">
+              <label class="form-check-label" for="role1">Role 3</label>
+            </div>
+
+            <div class="mt-2">{{'regFavoriteTitle' | translate}}</div>
+
+
+            <div class="d-flex flex-wrap">
+              <div class="me-2">
+                <input class="form-check-input" type="checkbox" value="" id="hard-rock">
+                <label class="form-label small" for="hard-rock">Hard Rock</label>
+              </div>
+
+              <div  class="me-2">
+                <input class="form-check-input" type="checkbox" value="" id="alternative-rock">
+                <label class="form-check-label" for="alternative-rock">Alternative Rock</label>
+              </div>
+
+              <div class="me-2">
+                <input class="form-check-input" type="checkbox" value="" id="hip-hop">
+                <label class="form-check-label" for="hip-hop">Hip-hop</label>
+              </div>
+            </div>
+
+
+            <div class="d-flex justify-content-between align-items-center mt-3">
+              <a routerLink="/authentication" class="text-success">{{'authBtn'|translate}}</a>
+              <input type="submit" class="btn btn-light" value="{{'regSubmitBtn'| translate}}" title="{{'regSubmitBtn'| translate}}">
+            </div>
+
+
+
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+
+body{
+  font-family: "Comic Sans MS", sans-serif;
+}
+
 .bg-dark-opacity-10-hover:hover{
   background-color: rgba(0,0,0,0.1);
 }
@@ -24,6 +29,10 @@
   background-color: rgb(170,255,10);
 }
 
+.border-green{
+  border-color: rgb(170,255,10) !important;
+}
+
 .text-green{
   color: rgb(170,255,10);
 }
@@ -34,9 +43,20 @@
   justify-content: center;
   align-items: center;
 }
+.c-pointer{
+  cursor:pointer;
+}
+
+.hover-black:hover{
+  color: #000;
+}
+
+.hover-gray:hover{
+  background-color: rgba(128, 128, 128, 0.2);
+}
 
 .card-img-overlay{
-  background-color: rgba(128, 128, 128, 0.62);
+  background-color: rgba(128, 128, 128, 0.35);
 }
 
 .i-sq{
@@ -92,4 +112,44 @@
 .i-sq-5{
   width: 80px;
   height: 80px;
+}
+
+.anim{
+  transition: all 0.2s;
+}
+
+.filter{
+  border: solid 2px #dee2e6;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+}
+
+.filter:hover{
+  background-color: #f0f0f0;
+}
+
+.list-group-item-action:hover{
+  background-color: rgba(170,255,10, 0.1);
+  color: #000;
+}
+
+.zenor-active{
+  background-color: rgba(170,255,10, 0.8);
+  color:white;
+}
+
+.list-group-item .arrow{
+  position: relative;
+  transition: 0.2s;
+  left:0;
+  opacity: 0;
+}
+
+.list-group-item:hover .arrow{
+  left:4px;
+  transition: 0.2s;
+  opacity: 1;
 }

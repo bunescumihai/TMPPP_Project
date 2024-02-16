@@ -9,23 +9,89 @@
       <i class="fa fa-search fs-5"></i>
     </div>
   </div>
-  <div class="col-3 d-flex justify-content-end">
-    <div class="icon-sq icon-sq-3 rounded-2">
+  <div routerLink="/me" class="col-3 d-flex justify-content-end">
+    <div class="i-sq i-sq-3 bg-light i-sq-white  rounded-2">
       <i class="bi bi-person opacity-75 fs-3"></i>
     </div>
   </div>
 </div>
+
+<section class="d-flex mt-4 mb-2">
+  <div class="filter anim"># Popularity</div>
+  <div class="filter anim"># Newest</div>
+  <div class="filter anim"># The best</div>
+</section>
+
 <app-slider></app-slider>
 
-<section class="mt-5">
-  <div class="fs-2 fw-semibold mb-2">{{ 'titlePopularSongs' | translate}}</div>
-  <app-simple-song></app-simple-song>
-</section>
 
-<section class="mt-4">
-  <div class="fs-2 fw-semibold mb-2">{{ 'titleNewSongs' | translate}}</div>
-</section>
+<div class="row ms-0 mt-5">
+  <div class="col-9">
+    <div>
 
-<section class="mt-4">
-  <div class="fs-2 fw-semibold">{{ 'titleRecomended' | translate}}</div>
-</section>
+      <section class="mb-4 position-relative">
+        <div class="position-absolute end-0" style="top:12px">
+          <span class="fw-semibold c-pointer p-1 opacity-75 fs-6 hover-black anim">{{'viewMoreButton'| translate}}<i class="bi bi-arrow-right"></i></span>
+        </div>
+        <div class="fs-2 fw-semibold mb-2">{{ 'titlePopularSongs' | translate}}</div>
+        <div class="row row-cols-2 ms-0 p-2 bg-light">
+          <div>
+            <app-simple-song *ngFor="let e of songs" [song]="e"></app-simple-song>
+          </div>
+          <div>
+            <app-simple-song *ngFor="let e of songs" [song]="e"></app-simple-song>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-4 position-relative">
+        <div class="position-absolute end-0" style="top:12px">
+          <span class="fw-semibold c-pointer p-1 opacity-75 fs-6 hover-black anim">{{'viewMoreButton'| translate}}<i class="bi bi-arrow-right"></i></span>
+        </div>
+        <div class="fs-2 fw-semibold mb-2">{{ 'titleNewSongs' | translate}}</div>
+      </section>
+
+      <section class="mb-4">
+
+        <div class="fs-2 fw-semibold mb-2">{{ 'titleArtists' | translate}}</div>
+        <div class="row row-cols-5">
+          <app-big-card></app-big-card>
+          <app-big-card></app-big-card>
+          <app-big-card></app-big-card>
+          <app-big-card></app-big-card>
+          <app-big-card></app-big-card>
+        </div>
+      </section>
+
+      <section class="position-relative">
+        <div class="position-absolute end-0" style="top:12px">
+          <span class="fw-semibold c-pointer p-1 opacity-75 fs-6 hover-black anim">{{'viewMoreButton'| translate}}<i class="bi bi-arrow-right"></i></span>
+        </div>
+        <div class="fs-2 fw-semibold">{{ 'titleRecomended' | translate}}</div>
+      </section>
+    </div>
+  </div>
+
+  <div class="col-3 position-relative">
+    <div class="position-sticky bg-light p-2 top-0">
+      <section id="my-playlists" class="mb-3 border border-green rounded-2">
+        <div class="bg-green fs-5 p-2 fw-semibold rounded-2">
+          {{ 'userPlaylists'| translate }}
+        </div>
+        <div >
+          <div>
+            <app-playlist-min *ngFor="let e of songs" [song]="e"></app-playlist-min>
+          </div>
+
+        </div>
+      </section>
+      <section id="history">
+        <div class="bg-green fs-5 p-2  fw-semibold rounded-2">
+          {{ 'userHistory'| translate }}
+        </div>
+      </section>
+    </div>
+  </div>
+</div>
+
+

@@ -3,6 +3,9 @@
     <div class="d-flex justify-content-between">
       <div>
         <div class="btn-group" dropdown>
+          <a routerLink="/">
+              <i class="bi bi-house-fill text-white fs-5 me-4"></i>
+          </a>
           <button id="button-animated" dropdownToggle type="button" class="btn btn-light btn-sm dropdown-toggle" aria-controls="dropdown-animated">
             <i class="fa fa-globe me-1" aria-hidden="true"></i>
             <span class="pb-2">{{ siteLanguage }}</span>
@@ -22,12 +25,17 @@
         </div>
       </div>
       <div class="bg-white bg-opacity-10 d-flex align-items-center">
-        <a routerLink="/" role="button" class="btn btn-light btn-sm">My playlists<i class="bi bi-music-note-list ms-1"></i> </a>
-        <a routerLink="/" role="button" class="text-white ms-3"><i class="fa fa-heart ms-1 fs-5 fw-bold"></i> </a>
+        <a routerLink="/playlist" role="button" class="btn btn-light btn-sm">My playlists<i class="bi bi-music-note-list ms-1"></i> </a>
+        <a routerLink="/authentication" role="button" class="text-white ms-3"><i class="fa fa-heart ms-1 fs-5 fw-bold"></i> </a>
       </div>
     </div>
   </div>
 </header>
+
 <main class="container">
   <router-outlet></router-outlet>
 </main>
+
+<footer>
+  I'm in footer
+</footer>

@@ -19,4 +19,5 @@ import {NgxTranslateModule} from "../translate/translate.module";
     NgxTranslateModule
   ]
 })
+
 export class HomeModule { }
